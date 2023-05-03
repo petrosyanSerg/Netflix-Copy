@@ -1,0 +1,78 @@
+.row {
+	margin-left: 2px;
+	color: #fff;
+
+	h2 {
+		padding-left: 20px;
+		margin-top: 20px;
+	}
+
+	.player {
+		margin: 0 auto;
+		display: block;
+		user-select: none;
+	}
+
+	.row__posters {
+		display: flex;
+		align-items: center;
+		overflow-x: scroll;
+		padding: 20px;
+
+		&::-webkit-scrollbar {
+			display: inline-block;
+			// display: none; տակի scroll-ը թաքցնելու համար
+			cursor: ew-resize;
+			height: 3px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: #f8f7f771;
+			border-radius: 12px;
+		}
+
+		.row__poster {
+			object-fit: contain;
+			width: 100%;
+			max-height: 100px;
+			margin-right: 10px;
+			transition: transform 450ms;
+			cursor: pointer;
+
+			&:hover {
+				transform: scale(1.08);
+			}
+		}
+
+		.row_posterlarge {
+			min-height: 250px;
+
+			&:hover {
+				transform: scale(1.09);
+			}
+		}
+	}
+
+	.video_box {
+		position: relative;
+
+		span {
+			position: absolute;
+			top: 15px;
+			right: 25px;
+			font-size: 30px;
+
+			&:hover {
+				transform: scale(0.97);
+				transition: 0.2s;
+				cursor: pointer;
+			}
+
+			svg {
+				color: #ff0000b7;
+				padding: 0;
+				border: 1px dashed #ff0000b7;
+			}
+		}
+	}
+}
