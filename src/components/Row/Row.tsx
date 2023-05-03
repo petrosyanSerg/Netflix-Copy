@@ -17,7 +17,7 @@ const base_url: string = "https://image.tmdb.org/t/p/w500/";
 
 export default function Row({ title, fetchUrl, islargeRow }: IRowProps) {
   const [movies, setmovies] = useState<IRowMovie[]>([]);
-  const [trailerUrl, settrailerUrl] = useState("");
+  const [trailerUrl, settrailerUrl] = useState<string>("");
   const [timeToPlay, settimeToPlay] = useState<boolean>(false);
 
   useEffect(() => {
