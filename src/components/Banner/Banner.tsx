@@ -16,7 +16,6 @@ export default function Banner() {
           Math.floor(Math.random() * request.data.results.length)
         ]
       );
-      await console.log(movie);
     }
 
     fetchData();
